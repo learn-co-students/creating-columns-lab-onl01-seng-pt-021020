@@ -16,11 +16,26 @@ body, html {
   margin: 10px auto;
 }
 
+.grid-container {
+  max-height: 600px;
+  min-height: 400px;
+  width: 95%;
+  margin: auto;
+  display: grid;
+  grid: repeat(3, auto) / repeat(3, auto);
+  grid-gap: 5px;
+}
+
 h4 {
   width: fit-content;
   display: inline-block;
   padding: 5px;
   margin: 20px 0 0 0;
+}
+
+img {
+  width: 100%;
+  height: 100%;
 }
 
 img:hover {
@@ -46,6 +61,19 @@ img:hover {
   background-color: #dd4444;
 }
 
-/* create a column class! make sure all of the divs within 'container's have a class of 'column' */
+.small {
+  width: 1fr;
+  height: 1fr;
+}
 
-/* create your tile classes! we recommend .small .med .large */
+.medium-right {
+  grid-area: 1 / 2 / span 2 / span 2;
+}
+
+.medium-left {
+  grid-area: 1 / 1 / span 2 / span 2;
+}
+
+.large {
+  grid-area: 1 / 1 / span 3 / span 3;
+}
